@@ -27,6 +27,8 @@ using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Npgsql.BackendMessages;
 using Npgsql.PostgresTypes;
+using NpgsqlTypes;
+using AgensGraphTypes;
 
 namespace Npgsql.TypeHandlers
 {
@@ -43,6 +45,9 @@ namespace Npgsql.TypeHandlers
     /// * The column data encoded as binary
     /// </remarks>
     [TypeMapping("record")]
+    [TypeMapping("vertex", NpgsqlDbType.Vertex, typeof(Vertex))]
+    [TypeMapping("graphpath", NpgsqlDbType.GraphPath, typeof(Path))]
+    [TypeMapping("edge", NpgsqlDbType.Edge, typeof(Edge))]
     class RecordHandler : ChunkingTypeHandler<object[]>
     {
         readonly TypeHandlerRegistry _registry;

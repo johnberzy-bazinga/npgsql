@@ -467,8 +467,34 @@ namespace NpgsqlTypes
         /// <summary>
         /// The geometry type for postgresql spatial extension postgis.
         /// </summary>
-        Geometry = 50
+        Geometry = 50,
+        
+        #region Agens
 
+        /// <summary>
+        /// The graphid type for agensdb.
+        /// </summary>
+        GraphId = 60,
+
+        /// <summary>
+        /// The vertex type for agensdb.
+        /// </summary>
+        Vertex = 61,
+
+        /// <summary>
+        /// The edge type for agensdb.
+        /// </summary>
+        Edge = 62,
+
+        /// <summary>
+        /// The edge type for agensdb.
+        /// </summary>
+        GraphPath = 63,
+
+        
+
+        #endregion
+        
         #endregion
     }
 }
